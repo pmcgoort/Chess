@@ -1,0 +1,81 @@
+$size: 7vw;
+
+.blackSquare{
+  background-color: #cc6600;
+}
+
+.whiteSquare{
+  background-color: #ffcc99;
+}
+
+.clickedSquare{
+  background-color: green
+}
+
+.square{
+  height: $size;
+  width: $size;
+  display: inline-block;
+}
+
+.square:hover{
+  background-color: #ffff66
+}
+
+.newRow{
+  height: $size;
+}
+
+.piece{
+  text-align: center;
+  font-size: $size*0.93;
+}
+
+.hide{
+  display: none;
+}
+
+#pawnChange{
+  position: absolute;
+  left: $size * 8.5;
+  top: $size * 0.5;
+  font-size: $size / 4;
+}
+
+.pawnChangeButton{
+  display: block;
+  font-size: $size / 4;
+  width: $size;
+  background-color: white;
+}
+
+.pawnChangeButton:hover{
+  background-color: black;
+  color: white
+}
+
+#reset{
+  position: absolute;
+  left: $size * 8.5;
+  top: $size * 5;
+  background-color: white;
+  width: $size;
+  font-size: $size / 4;
+}
+
+#reset:hover{
+  background-color: black;
+  color: white
+}
+
+#turn{
+  position: absolute;
+  left: $size * 8.5;
+  top: $size * 6;
+  font-size: $size * 0.93;
+  border-style: solid;
+  border-width: $size / 20;
+  width: $size;
+  height: $size;
+  text-align: center;
+}
