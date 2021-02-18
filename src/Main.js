@@ -85,6 +85,7 @@ class Main extends Component {
       this.setState({
         clicked: [false, 8, 8, 8, 8]
       })
+      return
     }
     var message = ''
     if(check(board, this.state.turn)){
