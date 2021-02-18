@@ -1,5 +1,5 @@
 
-#Chess
+# Chess
 
 This is a two player chess game. To read the rules of chess click [here](https://en.wikipedia.org/wiki/Rules_of_chess).
 
