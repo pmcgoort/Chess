@@ -209,6 +209,7 @@ class Main extends Component {
 
                 /*assigns the piece icon to each square*/
                 var piece
+                var pieceClass = 'piece'
 
                 switch (board[index][jndex]){
                   case 'WK':
@@ -261,18 +262,20 @@ class Main extends Component {
                   break
 
                   default:
+                    piece = 'l'
+                    pieceClass = 'piece emptySquare'
                   break;
                 }
                 if(this.state.message !== 'Checkmate' && this.state.message !== 'Stalemate'){
                   return(
                     <div class={squareColor} onClick={this.clicked(index, jndex)}>
-                      <div class='piece'>{piece}</div>
+                      <div class={pieceClass}>{piece}</div>
                     </div>
                   )
                 } else {
                   return(
                     <div class={squareColor}>
-                      <div class='piece'>{piece}</div>
+                      <div class={pieceClass}>{piece}</div>
                     </div>
                   )
                 }
@@ -282,7 +285,7 @@ class Main extends Component {
           )
           })
         }
-        <button id='reset' onClick={this.reset}>Reset</button>
+        <button id='reset' onClick={this.reset}>New Game</button>
         <p id='turn'>{turn}</p>
         <p id='message'>{this.state.message}</p>
         <div id='pawnChange' class={pawnChange}>

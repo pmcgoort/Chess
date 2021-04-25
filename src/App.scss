@@ -13,9 +13,16 @@ $size: 8vh;
 }
 
 .square{
+  z-index: 1;
   height: $size;
   width: $size;
   display: inline-block;
+}
+
+.emptySquare{
+  z-index: -1;
+  font-size: 20px;
+  color: rgba(55,0,0,0);
 }
 
 .square:hover{
@@ -28,7 +35,10 @@ $size: 8vh;
 
 .piece{
   text-align: center;
-  font-size: $size*0.93;
+  height: $size;
+  width: $size;
+  display: inline-block;
+  font-size: $size*0.8;
 }
 
 .hide{
@@ -78,4 +88,8 @@ $size: 8vh;
   width: $size;
   height: $size;
   text-align: center;
+}
+
+#message{
+  font-size: $size/2
 }
