@@ -13,13 +13,16 @@ $size: 8vh;
 }
 
 .square{
+  vertical-align: top;
   z-index: 1;
   height: $size;
   width: $size;
   display: inline-block;
+  cursor: pointer;
 }
 
 .emptySquare{
+  vertical-align: top;
   z-index: -1;
   font-size: 20px;
   color: rgba(55,0,0,0);
@@ -71,6 +74,7 @@ $size: 8vh;
   background-color: white;
   width: $size;
   font-size: $size / 4;
+  cursor: pointer;
 }
 
 #reset:hover{

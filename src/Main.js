@@ -8,14 +8,14 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      board: [['WR','WN','WB','WQ','WK','WB','WN','WR'],
+      board: [['WR','WN','WB','WK','WQ','WB','WN','WR'],
               ['WP','WP','WP','WP','WP','WP','WP','WP'],
               [' ',' ',' ',' ',' ',' ',' ',' '],
               [' ',' ',' ',' ',' ',' ',' ',' '],
               [' ',' ',' ',' ',' ',' ',' ',' '],
               [' ',' ',' ',' ',' ',' ',' ',' '],
               ['BP','BP','BP','BP','BP','BP','BP','BP'],
-              ['BR','BN','BB','BQ','BK','BB','BN','BR']],
+              ['BR','BN','BB','BK','BQ','BB','BN','BR']],
       clicked: [false, 8, 8, 8, 8],
       turn: 'White',
       message: '',
@@ -125,14 +125,14 @@ class Main extends Component {
 
   reset(){
     this.setState({
-      board: [['WR','WN','WB','WQ','WK','WB','WN','WR'],
+      board: [['WR','WN','WB','WK','WQ','WB','WN','WR'],
               ['WP','WP','WP','WP','WP','WP','WP','WP'],
               [' ',' ',' ',' ',' ',' ',' ',' '],
               [' ',' ',' ',' ',' ',' ',' ',' '],
               [' ',' ',' ',' ',' ',' ',' ',' '],
               [' ',' ',' ',' ',' ',' ',' ',' '],
               ['BP','BP','BP','BP','BP','BP','BP','BP'],
-              ['BR','BN','BB','BQ','BK','BB','BN','BR']],
+              ['BR','BN','BB','BK','BQ','BB','BN','BR']],
       clicked: [false, 8, 8, 8, 8],
       turn: 'White',
       message: '',
@@ -199,9 +199,9 @@ class Main extends Component {
             <div class='newRow'>
             {
               i.map((j, jndex) => {
-                var squareColor = 'blackSquare square'
+                var squareColor = 'whiteSquare square'
                 if((index + jndex) % 2 === 1){
-                  squareColor = 'whiteSquare square'
+                  squareColor = 'blackSquare square'
                 }
                 if((index === this.state.clicked[1] && jndex === this.state.clicked[2])){
                   squareColor = 'clickedSquare square'
@@ -262,7 +262,6 @@ class Main extends Component {
                   break
 
                   default:
-                    piece = 'l'
                     pieceClass = 'piece emptySquare'
                   break;
                 }
